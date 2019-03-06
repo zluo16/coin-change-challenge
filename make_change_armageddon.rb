@@ -84,9 +84,3 @@ else
   puts table
   puts "\nCount: #{$combs.length}\n\n"
 end
-
-# string = 'Quarter,4,Dime,10,Nickel,20,Penny,100'
-
-# string = 'Coin,1.5,Arrowhead,3,Button,150'
-
-# string = 'Half Dollar,2,Quarter,4,Dime,10,Nickel,20,Penny,100'
