@@ -1,5 +1,5 @@
 # The Coin Change Challenge
-##### A Dynamic Programming Challenge
+##### Iterative Solutions vs. Recursive Solutions
 
 
 ### Clone repo and install gems and node modules
@@ -79,7 +79,7 @@ Count: 6
 
 The smallest denomination, button, is worth 0.6666666 of a cent so the values given don't even break a dollar evenly.
 
-All this ment that I had to do some research into dynamic programming.
+All this ment that I had to do some research iterative and recursive programming approaches.
 
 The solution that I found for this was to create a recursive function that takes in an amount of
 change that we need to account for and a denomination. We move down an array of denominations
