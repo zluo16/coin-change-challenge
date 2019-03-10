@@ -11,7 +11,63 @@ bundle install && npm install
 ```bash
 npm start
 ```
+### Example prompts and input
+```bash
+Has the Fed collapsed? 'Y of N': # 'N'
+How much money would you like to break?:
+```
+If you input `'N'` on the first prompt and `1` on on the second, the output should look something like this:
+```bash
++===========+===========+==========+==========+
+|              Change Combinations            |
++===========+===========+==========+==========+
+|   Quarter |   Dime    |   Nickel |   Penny  |
++===========+===========+==========+==========+
+|      0    |      0    |     0    |    100   |
+|      0    |      0    |     1    |     95   |
+|      ...  |      ...  |     ...  |     ...  |
+|      ...  |      ...  |     ...  |     ...  |
+|      3    |      2    |     1    |     0    |
+|      4    |      0    |     0    |     0    |
++===========+===========+==========+==========+
 
+Count: 242
+
+```
+An input of `'Y'` on the prompt that asks if the Fed has collapsed will send you to another prompt that asks you to
+name denominations and provide the amount of each denomination one would need to break a dollar.
+```bash
+Has the Fed collapsed? 'Y of N': # 'Y'
+Input new denominations and how much is needed of each to total one dollar
+'Quarter,4,Dime,10,Nickel,20,Penny,100'
+Comma seperated with no spaces:
+```
+If you input `Half Dollar,2,Quarter,4,Dime,10,Nickel,20,Penny,100` and `1` when it asks you how much money you would
+like to break, the ouput will look like this:
+```bash
+How much money would you like to break?: # 1
+
++===============+===========+===========+==========+==========+
+|                      Change Combinations                    |
++===============+===========+===========+==========+==========+
+|   Half Dollar |   Quarter |   Dime    |   Nickel |   Penny  |
++===============+===========+===========+==========+==========+
+|        0      |      0    |      0    |     0    |    100   |
+|        0      |      0    |      0    |     1    |     95   |
+|        0      |      0    |      0    |     2    |     90   |
+|        ...    |      ...  |      ...  |     ...  |     ...  |
+|        ...    |      ...  |      ...  |     ...  |     ...  |
+|        ...    |      ...  |      ...  |     ...  |     ...  |
+|        1      |      1    |      2    |     1    |     0    |
+|        1      |      2    |      0    |     0    |     0    |
+|        2      |      0    |      0    |     0    |     0    |
++===============+===========+===========+==========+==========+
+
+Count: 292
+
+```
+
+## Breakdown of the Problems
 ***
 <dl>
   <dt>Part One</dt>
